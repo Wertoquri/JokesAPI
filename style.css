@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url("./images/background.jpg");
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: "roboto", monospace;
+}
+
+header {
+    background-image: url("./images/header.svg");
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 2rem 4rem;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    gap: 4rem;
+}
+
+header .logo {
+    height: 9rem;
+}
+
+header .title {
+    font-size: 3.5rem;
+    color: white;
+    letter-spacing: 1rem;
+}
+
+main {
+    background-image: url("./images/main.svg");
+    flex-grow: 1;
+    width: 100%;
+    background-size: cover;
+    margin: -1rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: white;
+    margin: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 2rem;
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.joke {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.joke_footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+.likes, .dislikes {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.likeBTN, .dislikeBTN {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.likeBTN:hover {
+    background-color: white;
+    color: black;
+}
+
+.dislikeBTN:hover {
+    background-color: white;
+    color: black;
+}
