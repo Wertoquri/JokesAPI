@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename)
 let dataPath = path.join(__dirname, "data")
 
 const server = http.createServer(function (req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*")
     if (req.url == "/jokes" && req.method == "GET") {
         getAllJokes(req, res)
     }
@@ -68,7 +69,7 @@ function like(req, res) {
         let file = fs.readFileSync(filepath)
         file = Buffer.from(file).toString()
         let joke = JSON.parse(file)
-        joke.like++;
+        joke.likes++;
         fs.writeFileSync(filepath, JSON.stringify(joke))
     }
     res.end()

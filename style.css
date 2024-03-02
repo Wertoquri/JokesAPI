@@ -100,3 +100,30 @@ h2 {
     background-color: white;
     color: black;
 }
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 ;
+}
+
+input {
+
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 333px;
+}
+
+
+button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 333px;
+    cursor: pointer;
+}
